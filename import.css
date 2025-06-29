@@ -1,5 +1,5 @@
 /**
-  *	@name BTTR-Transparancy
+  *	@name LOCAL-BTTR-Transparancy
   *	@author FCheet
   * @source https://github.com/DevEvil99/Ocean-Discord-Theme
   * @version 1.0
@@ -8,33 +8,34 @@
 :root {
 	
 	/*Colors*/
+	--channel-name-colors:var(--color-1);
 	--channel-color:#373b3e;
 	--user-color:;
 	--now-playing:#bec8d1;
-	--search-bar:;
+	--search-bar:var(--winbar);
 	--member-list:#e12885;
-	--icon-color: ;
+	--icon-color:var(--color-1) ;
 	--windows-buttons:white;
 	--chat-icons:var(--color-3);
 	--selected-channel:white;
 	--new-message-bar:green;
-	--server-list:blue;
+	--server-list:white;
 	--mentioned-color:var(--color-1);
+	--winbar:grey;
 
 	
 	/*Transparancy*/
 	--channel-trans:60%;
 	--User-trans:80%;
-	--nowPlaying:50%;
-	--search-trans:50%;
-	--member-trans:90%;
-	--discord-trans:0%;
-	--server-list-trans:20%;
+	--nowPlaying:80%; /*Rightside Friendslist*/
+	--search-trans:90%;
+	--member-trans:80%;
+	--server-list-trans:10%;
 	--mention-trans:90%;
 	
   --discord-wildow-color: #990099 ;
   --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;
-  --color-1: #7acbdc;
+  --color-1: #00d5ce;
   --color-2: #45818e;
   --color-3: #137a7f;
   
@@ -92,7 +93,7 @@ body,
 /*Search bar*/
 #app-mount .container__9293f.themed__9293f{
 	background-color:color-mix(in srgb,var(--search-bar) var(--search-trans), transparent);
-
+	box-shadow:0 2px 8px black inset ;
 }
 /*SETTINGS SIDEBAR*/
 #app-mount .sidebarRegion__23e6b{
@@ -101,7 +102,7 @@ body,
 /*Server bar*/
 #app-mount .sidebar_c48ade{
 	background-color:color-mix(in srgb, var(--channel-color) var(--channel-trans), transparent);
-	box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 5px 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 6px 0 5px black;
 }
 /*User Panel*/
 #app-mount .panels_c48ade{
@@ -116,10 +117,8 @@ body,
 
 #app-mount .nowPlayingColumn__133bf {
 	background-color: color-mix(in srgb,var(--now-playing) var(--nowPlaying), transparent);
+	box-shadow: -8px 0 10px;
 }
-
-
-
 
 
 .theme-dark .scroller_ef3116 {
@@ -160,14 +159,17 @@ body,
     margin-bottom: var(--custom-chat-input-margin-bottom);
 }
 
-/*Message Box WORKAWODKAWODKAWODKAWODKAWOKD*/
+/*Message Box*/
 .scrollableContainer__74017 {
   background: color-mix(in srgb,var(--color-1) 85%, transparent);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+  border:5px solid; 
+  border-radius:55px;
 }
 
-
+.container_c48ade{
+	--custom-chat-input-margin-bottom:5px;
+}
 .container__37e49 .button__67645:nth-child(1) .contents-18-Yxp path {
   fill: var(--color-1);
 }
@@ -193,28 +195,45 @@ body,
 .button-38aScr .contents-18-Yxp path {
   color: var(--color-1);
 }
+/*Top windows bar*/
+.platform-win .bar_c38106{
+	
+	background-color: color-mix(in srgb, var(--winbar) 80%, transparent);
+	box-shadow:0 5px 8px;
+}
 
 
 
 /* CHAT */
 .contents_c19a55 .messageContent_c19a55, .container_b7e1cb {
-  background-color:#00d5ce;
-  color: #000000;
+/*Delete these to remove small chat stuff*/
   display: inline-block;
   max-width: 650px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+/*till here*/
+
+  background-color: var(--color-1);
+  color: black;
   margin: 0;
   padding: 8px;
   border-radius: 15px;
    box-shadow: 0 4px 8px 0 #0080FF80, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-div:hover{
-	border-radius:5;
-	
+/*Chat names + timestamp background*/
+.header_c19a55{
+	border-radius:15px;
+	padding:4px;
+  background-color: color-mix(in srgb, var(--color-3) 80%, transparent);
+  display: inline-block;
+  max-width: 650px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
+
 .messageContent_c19a55:empty {
   display: none !important;
 }
@@ -247,7 +266,7 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
 }
 
 .linkButtonIcon__972a0 path {
-  color: var(--color-1);
+  color: var(--color-2);
 }
 .container__7d20c {
   background: transparent;
@@ -256,8 +275,7 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
   color: var(--color-2);
 }
 .item__133bf[aria-label="Add Friend"] {
-  color: var(--color-2) !important;
-  background-color: var(--color-1) !important;
+  background-color: var(--color-3) !important;
 }
 
 .quickswitcher_ac6cb0 {
@@ -297,8 +315,8 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
   color: var(--color-1);
 }
 .actionButton_f8fa06 {
-  background-color: var(--color-1);
-  color: var(--color-2);
+  background-color: var(--color-2);
+  color: var(--color-1);
 }
 
 .actionButton_f8fa06:hover {
@@ -313,15 +331,15 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
   color: var(--color-2);
   
 }
-/*?*/
+/*friends list active now*/
 .wrapper__00943 {
-  background-color: blue !important;
-  border: 0px;
-  
+  background-color: var(--color-2) !important;
+  border ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .wrapper__00943:hover,
 .wrapper__00943.active_bf1984 {
-  background-color: transparent !important;
+  background-color: var(--color-3) !important;
 }
 .wrapper__00943 .inset_bf1984 {
   background-color: transparent;
@@ -352,7 +370,7 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
 /*Icon Colors (bottom of server list*/
 .circleIconButton__5bc7e {
   color: var(--icon-color);
-  background-color: color-mix(in srgb, var(--color-1) 80%, transparent);
+  background-color: color-mix(in srgb, var(--color-1) 10%, transparent);
 }
 .circleIconButton__5bc7e.selected__5bc7e {
   color: var(--color-1);
@@ -377,10 +395,26 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
 }
 
 .header__7d20c {
-  color: var(--color-1);
+	color:var(--color-3);
 
 }
+.peopleListItem_cc6179{
+	background-color:var(--color-2);
+	border: 3px outset var(--color-3);
+	border-radius:10px;
+	box-shadow: 8px 5px 5px ;
+}
 
+.peopleListItem_cc6179:hover{
+	background-color:var(--color-1);
+	box-shadow: 8px 5px 5px ;
+	
+	
+}
+
+.username__0a06e{
+	color:white;
+}
 .icon_fea832 {
   height: 254px;
   width: 24px;
@@ -459,7 +493,7 @@ button[aria-label="Send a gift"] {
   background-color: var(--new-message-bar);
   color: var(--color-1);
 }
-/*Make As Read Button*/
+/*Mark As Read Button*/
 .barButtonAlt__0f481 {
   background-color: var(--color-2);
   color: var(--color-1);
@@ -473,8 +507,10 @@ button[aria-label="Send a gift"] {
 #app-mount .container__55c99 .option-2KkUJO.selected-rZcOL- {
   background: var(--color-2);
 }
+
+/*Channel names*/
 .overflow__82b15 {
-  color: var(--color-1);
+  color: var(--channel-name-colors);
 }
 
 .icon__29444 {
@@ -720,13 +756,7 @@ button[aria-label="Send a gift"] {
 .cozy_c19a55 .timestamp_c19a55,
 .content__908e2,
 .label_d8f25b {
-  color: var(--color-1);
-  text-decoration-line: underline;
-  background-color:grey;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius:5px;
+  
 }
 .button_f7ecac,
 .button_f7ecac:hover,
@@ -881,7 +911,7 @@ button[aria-label="Send a gift"] {
   background-image: var(--ocean-bg);
 }
 .message__02a39 {
-  background-color: var(--color-);
+  background-color: var(--color-3);
 }
 
 .channelName-3w2Y3c {
@@ -1045,7 +1075,7 @@ button[aria-label="Send a gift"] {
 }
 
 .icon__9293f, .title__9293f, .icon_a45028, .buttonWrapper__24af7 svg  {
-  color: var(--color-2) !important;
+  color: var(--color-1) !important;
 }
 
 .sprite__04eed.spriteGreyscale__04eed.active__04eed {
@@ -1095,9 +1125,9 @@ button[aria-label="Send a gift"] {
   background-color: var(--color-1) !important;
   color: var(--color-2) !important;
 }
-
+/*Server Name up top*/
 .headerContent_f37cb1 .name_f37cb1 {
-  color: var(--color-2);
+  color:white;
 }
 /*Reaction bar */
 .popoverReactionHoverBar_f84418 {
@@ -1112,7 +1142,7 @@ button.button__67645 .lottieIcon__5eb9b svg path {
   fill: var(--color-1) !important;
 }
 
-/*Channel Panel*/
+/*Server Panel*/
 .itemsContainer_ef3116 {
   background: color-mix(in srgb, var(--server-list) var(--server-list-trans), transparent);
   blur:(5px);
@@ -1131,9 +1161,16 @@ button.button__67645 .lottieIcon__5eb9b svg path {
 .panels_c48ade {
   border: 3px outset var(--color-1) !important;
 }
+
 /*Server Name Color*/
 .title_c38106 .defaultColor__4bd52 {
-  color: var(--server-name);
+  color: var(--color-1);
+  text-shadow:2px 2px black;
+}
+
+
+.buttons__37e49{
+	gap:0px;
 }
 
 
@@ -1176,13 +1213,13 @@ color: var(--color-1);
 text-shadow: 2px 2px 6px black;
 
 }
-
+/*Friends list*/
 .tabBody__133bf {
-  background: var(--color-2) !important;
+  background-color: color-mix(in srgb, var(--color-2) 80%, transparent)!important;
 }
 
 .title__85643 svg path {
-  fill: var(--color-) !important;
+  fill: var(--color-2) !important;
 }
 
 ::-webkit-scrollbar {
