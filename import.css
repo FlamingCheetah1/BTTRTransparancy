@@ -1,8 +1,8 @@
 /**
-  *	@name BTTR-Transparancy
+  *	@name LOCAL-BTTR-Transparancy
   *	@author FCheet
-  * @source https://github.com/DevEvil99/Ocean-Discord-Theme
-  * @version 1.1.4
+  * 	@source https://github.com/DevEvil99/Ocean-Discord-Theme
+  * 	@version 1.1.5
   */
 
 :root {
@@ -11,6 +11,7 @@
   --color-1: #00d5ce;
   --color-2: #45818e;
   --color-3: #137a7f;
+  
   
 	--channel-name-colors:var(--color-1);
 	--channel-color:#373b3e;
@@ -41,6 +42,7 @@
 	--member-trans:80%;
 	--server-list-trans:10%;
 	--mention-trans:80%;
+	--friendlist-trans:50%;
 	
   --discord-wildow-color: #990099 ;
   --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;
@@ -1189,7 +1191,6 @@ button.button__67645 .lottieIcon__5eb9b svg path {
 /*Server Name Color*/
 .title_c38106 .defaultColor__4bd52 {
   color: var(--color-1);
-  text-shadow:2px 2px black;
 }
 
 
@@ -1239,7 +1240,7 @@ text-shadow: 2px 2px 8px black;
 }
 /*Friends list*/
 .tabBody__133bf {
-  background-color: color-mix(in srgb, var(--color-2) 80%, transparent)!important;
+  background-color: color-mix(in srgb, var(--color-3) var(--friendlist-trans), transparent)!important;
 }
 
 .title__85643 svg path {
