@@ -2,27 +2,35 @@
   *	@name BTTR-Transparancy
   *	@author FCheet
   * @source https://github.com/DevEvil99/Ocean-Discord-Theme
-  * @version 1.1.2
+  * @version 1.1.4
   */
-
 
 :root {
 	
 	/*Colors*/
+  --color-1: #00d5ce;
+  --color-2: #45818e;
+  --color-3: #137a7f;
+  
 	--channel-name-colors:var(--color-1);
 	--channel-color:#373b3e;
 	--user-color:;
 	--now-playing:#bec8d1;
 	--search-bar:var(--winbar);
 	--member-list:#e12885;
-	--icon-color:var(--color-1) ;
-	--windows-buttons:white;
+	--new-message-bar:;
+	--server-list:white;
+	
+	
+	--icon-color:var(--color-1);
 	--chat-icons:var(--color-3);
 	--selected-channel:white;
-	--new-message-bar:green;
-	--server-list:white;
+	--pinged-color:white;	
 	--mentioned-color:var(--color-1);
+	
+	
 	--winbar:grey;
+	--windows-buttons:white;
 
 	
 	/*Transparancy*/
@@ -32,16 +40,13 @@
 	--search-trans:90%;
 	--member-trans:80%;
 	--server-list-trans:10%;
-	--mention-trans:90%;
+	--mention-trans:80%;
 	
   --discord-wildow-color: #990099 ;
   --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;
-  --color-1: #00d5ce;
-  --color-2: #45818e;
-  --color-3: #137a7f;
+
   
 }
-
 
 .app__160d8 {
   background-color:green;
@@ -49,7 +54,7 @@
 }
 
 .bg__960e4 {
-  background-color: ;
+  background-color:transparent ;
 }
 
 #app-mount .layer__960e4  {
@@ -104,7 +109,7 @@ body,
 /*Server bar*/
 #app-mount .sidebar_c48ade{
 	background-color:color-mix(in srgb, var(--channel-color) var(--channel-trans), transparent);
-	box-shadow: 6px 0 5px black;
+	box-shadow: 4px 0 10px black;
 }
 /*User Panel*/
 #app-mount .panels_c48ade{
@@ -169,6 +174,23 @@ body,
   border-radius:55px;
 }
 
+/*member backgrounds*/
+.childContainer__91a9d{
+	background-color:color-mix(in srgb,var(--color-3) var(--member-trans), transparent);
+	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.membersGroup_c8ffbb .container__13cf1 ,.header__13cf1{
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	border-radius:5px;
+	padding:5px;
+	margin:5px;
+}
+
 .container_c48ade{
 	--custom-chat-input-margin-bottom:5px;
 }
@@ -221,7 +243,7 @@ body,
   margin: 0;
   padding: 8px;
   border-radius: 15px;
-   box-shadow: 0 4px 8px 0 #0080FF80, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   box-shadow: 0 4px 8px 0 var(--color-2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*Chat names + timestamp background*/
@@ -1034,8 +1056,9 @@ button[aria-label="Send a gift"] {
   color: var(--color-2);
 }
 
+/*member hover Color*/
 .clickable__91a9d:hover .layout__91a9d, .member_c8ffbb, .members_c8ffbb {
-  background-color: transparent;
+  background-color: var(--color-3);
 }
 
 .container-3wLKDe {
@@ -1107,7 +1130,7 @@ button[aria-label="Send a gift"] {
 }
 /*MENTIONED*/
 .mentioned__5126c {
-  background-color: color-mix(in srgb, var(--mentioned-color) 90%, transparent) !important;
+  background-color: color-mix(in srgb, var(--mentioned-color) var(--mention-trans), transparent) !important;
 
 }
 .mentioned__5126c:before {
@@ -1115,8 +1138,7 @@ button[aria-label="Send a gift"] {
 }
 
 .mention, .channelMention  {
-  background-image: linear-gradient(var(--), yellow);
-  color: var(--color-2) !important;
+  color: var(--pinged-color) !important;
 }
 
 .contents__201d5.buttonContents_e131a9 .lottieIcon__5eb9b.buttonIcon_e131a9 {
@@ -1206,13 +1228,13 @@ color: var(--color-1);
 }
 /*Right Click menu*/
 .menu_c1e9c4 {
-background-color: color-mix(in srgb, var(--color-2) 80%, transparent) !important;
+background-color: color-mix(in srgb, var(--color-2) 90%, transparent) !important;
 box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /*Right click text*/
 .menu_c1e9c4 .label_c1e9c4, .menu_c1e9c4 .iconContainer_c1e9c4 svg {
 color: var(--color-1);
-text-shadow: 2px 2px 6px black;
+text-shadow: 2px 2px 8px black;
 
 }
 /*Friends list*/
@@ -1261,4 +1283,4 @@ text-shadow: 2px 2px 6px black;
 ::selection {
   background-color: var(--color-2);
   color: var(--color-1);
-}
+}}
