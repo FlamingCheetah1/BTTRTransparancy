@@ -2,10 +2,9 @@
   *	@name LOCAL-BTTR-Transparancy
   *	@author FCheet
   * 	@source https://github.com/DevEvil99/Ocean-Discord-Theme
-  * 	@version 1.1.5
+  * 	@version 1.1.6
   */
 
-:root {
 	
 	/*Colors*/
   --color-1: #00d5ce;
@@ -21,6 +20,8 @@
 	--member-list:#e12885;
 	--new-message-bar:;
 	--server-list:white;
+	--friendlist-center-bg:var(--color-2);
+	--friends-color:var(--color-3);
 	
 	
 	--icon-color:var(--color-1);
@@ -424,8 +425,10 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
 	color:var(--color-3);
 
 }
+
+/*Friends List center*/
 .peopleListItem_cc6179{
-	background-color:var(--color-2);
+	background-color:var(--friends-color);
 	border: 3px outset var(--color-3);
 	border-radius:10px;
 	box-shadow: 8px 5px 5px ;
@@ -1240,7 +1243,7 @@ text-shadow: 2px 2px 8px black;
 }
 /*Friends list*/
 .tabBody__133bf {
-  background-color: color-mix(in srgb, var(--color-3) var(--friendlist-trans), transparent)!important;
+  background-color: color-mix(in srgb, var(--friendlist-center-bg) var(--friendlist-trans), transparent)!important;
 }
 
 .title__85643 svg path {
