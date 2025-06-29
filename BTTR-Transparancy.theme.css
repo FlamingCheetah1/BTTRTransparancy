@@ -1,0 +1,78 @@
+/**
+  *	@name BTTR-Transparancy
+  *	@author FCheet
+  * @source https://github.com/DevEvil99/Ocean-Discord-Theme
+  * @version 1.1.2
+  */
+  
+  
+ @import url("https://flamingcheetah1.github.io/BTTRTransparancy/import.css");
+ 
+ 
+:root {
+	
+	/*Colors*/
+	--channel-name-colors:var(--color-1);
+	--channel-color:#373b3e;
+	--user-color:;
+	--now-playing:#bec8d1;
+	--search-bar:var(--winbar);
+	--member-list:#e12885;
+	--icon-color:var(--color-1) ;
+	--windows-buttons:white;
+	--chat-icons:var(--color-3);
+	--selected-channel:white;
+	--new-message-bar:green;
+	--server-list:white;
+	--mentioned-color:var(--color-1);
+	--winbar:grey;
+
+	
+	/*Transparancy*/
+	--channel-trans:60%;
+	--User-trans:80%;
+	--nowPlaying:80%; /*Rightside Friendslist*/
+	--search-trans:90%;
+	--member-trans:80%;
+	--server-list-trans:10%;
+	--mention-trans:90%;
+	
+  --discord-wildow-color: #990099 ;
+  --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;
+  --color-1: #00d5ce;
+  --color-2: #45818e;
+  --color-3: #137a7f;
+  
+}
+
+
+/*IMPORTANT*/
+/*Search bar*/
+#app-mount .container__9293f.themed__9293f{
+	background-color:color-mix(in srgb,var(--search-bar) var(--search-trans), transparent);
+	box-shadow:0 2px 8px black inset ;
+}
+/*SETTINGS SIDEBAR*/
+#app-mount .sidebarRegion__23e6b{
+	background-color:var(--channel-color);
+}
+/*Server bar*/
+#app-mount .sidebar_c48ade{
+	background-color:color-mix(in srgb, var(--channel-color) var(--channel-trans), transparent);
+	box-shadow: 6px 0 5px black;
+}
+/*User Panel*/
+#app-mount .panels_c48ade{
+	background-color:color-mix(in srgb,var(--user-color) var(--User-trans), transparent);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*Server Member list*/
+#app-mount .membersWrap_c8ffbb{
+	background-color:color-mix(in srgb,var(--member-list) var(--member-trans), transparent);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#app-mount .nowPlayingColumn__133bf {
+	background-color: color-mix(in srgb,var(--now-playing) var(--nowPlaying), transparent);
+	box-shadow: -8px 0 10px;
+}
