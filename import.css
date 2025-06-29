@@ -2,44 +2,8 @@
   *	@name BTTR-Transparancy
   *	@author FCheet
   * @source https://github.com/DevEvil99/Ocean-Discord-Theme
-  * @version 1.1
+  * @version 1.1.2
   */
-
-:root {
-	
-	/*Colors*/
-	--channel-name-colors:var(--color-1);
-	--channel-color:#373b3e;
-	--user-color:;
-	--now-playing:#bec8d1;
-	--search-bar:var(--winbar);
-	--member-list:#e12885;
-	--icon-color:var(--color-1) ;
-	--windows-buttons:white;
-	--chat-icons:var(--color-3);
-	--selected-channel:white;
-	--new-message-bar:green;
-	--server-list:white;
-	--mentioned-color:var(--color-1);
-	--winbar:grey;
-
-	
-	/*Transparancy*/
-	--channel-trans:60%;
-	--User-trans:80%;
-	--nowPlaying:80%; /*Rightside Friendslist*/
-	--search-trans:90%;
-	--member-trans:80%;
-	--server-list-trans:10%;
-	--mention-trans:90%;
-	
-  --discord-wildow-color: #990099 ;
-  --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;
-  --color-1: #00d5ce;
-  --color-2: #45818e;
-  --color-3: #137a7f;
-  
-}
 
 .app__160d8 {
   background-color:green;
