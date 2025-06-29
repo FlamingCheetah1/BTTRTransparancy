@@ -23,6 +23,8 @@
 	--member-list:#e12885;
 	--new-message-bar:;
 	--server-list:white;
+	--friendlist-center-bg:var(--color-2);
+	--friends-color:var(--color-3);
 	
 	
 	--icon-color:var(--color-1);
