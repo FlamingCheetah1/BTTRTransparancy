@@ -100,7 +100,6 @@ body,
 }
 
 
-
 /*IMPORTANT*/
 /*Search bar*/
 #app-mount .container__9293f.themed__9293f{
@@ -131,6 +130,7 @@ body,
 	background-color: color-mix(in srgb,var(--now-playing) var(--nowPlaying), transparent);
 	box-shadow: -8px 0 10px;
 }
+
 
 
 .theme-dark .scroller_ef3116 {
@@ -186,6 +186,9 @@ body,
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.childContainer__91a9d:hover{
+	background-color:green;
+}
 
 .membersGroup_c8ffbb .container__13cf1 ,.header__13cf1{
 	width: -webkit-fit-content;
@@ -245,16 +248,18 @@ body,
 
   background-color: var(--color-1);
   color: black;
-  margin: 0;
+  margin: 0px;
   padding: 8px;
   border-radius: 15px;
-   box-shadow: 0 4px 8px 0 var(--color-2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 var(--color-2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
 
 /*Chat names + timestamp background*/
 .header_c19a55{
-	border-radius:15px;
-	padding:4px;
+	border-radius:8px;
+	padding:2px;
   background-color: color-mix(in srgb, var(--color-3) 80%, transparent);
   display: inline-block;
   max-width: 650px;
@@ -367,7 +372,7 @@ article.embedWrapper_b7e1cb.embedFlexGrow_b7e1cb.embedFull__623de.embed__623de.m
 }
 .wrapper__00943:hover,
 .wrapper__00943.active_bf1984 {
-  background-color: var(--color-3) !important;
+  background-color: var(--color-2) !important;
 }
 .wrapper__00943 .inset_bf1984 {
   background-color: transparent;
@@ -701,7 +706,7 @@ button[aria-label="Send a gift"] {
   color: var(--color-1);
 }
 .markup__75297 a {
-  color: var(--color-2);
+  color: var(--color-1);
 }
 .topic__6ec1a.expandable__6ec1a {
   color: var(--color-2);
@@ -1120,7 +1125,7 @@ button[aria-label="Send a gift"] {
 }
 
 .button__201d5 .contents__201d5 {
-  color: white;
+  color: var(--color-1);
 }
 
 .container_f369db {
@@ -1165,7 +1170,7 @@ button[aria-label="Send a gift"] {
 }
 
 .repliedTextPreview_c19a55 {
-  color: var(--color-2);
+  color: var(--color-1);
 }
 /**Icon color*/
 button.button__67645 .lottieIcon__5eb9b svg path {
@@ -1197,6 +1202,15 @@ button.button__67645 .lottieIcon__5eb9b svg path {
   color: var(--color-1);
 }
 
+.cozy_c19a55 .repliedMessage_c19a55{
+	padding:8px;
+	border-radius:15px;
+	background-color:var(--color-3);
+  max-width: 650px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 .buttons__37e49{
 	gap:0px;
