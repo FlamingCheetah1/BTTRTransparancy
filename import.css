@@ -2,8 +2,10 @@
   *	@name BTTR-Transparancy
   *	@author FCheet
   * 	@source https://github.com/DevEvil99/Ocean-Discord-Theme
-  * 	@version 1.1.7
+  * 	@version 1.1.8
   */
+
+
 :root {
 	
 	/*Colors*/
@@ -39,7 +41,7 @@
 	--channel-trans:60%;
 	--User-trans:80%;
 	--nowPlaying:80%; /*Rightside Friendslist*/
-	--search-trans:90%;
+	--search-trans:50%;
 	--member-trans:80%;
 	--server-list-trans:10%;
 	--mention-trans:80%;
@@ -54,7 +56,7 @@
 }
 
 .app__160d8 {
-  background-color:green;
+  background-color:var(--color-2);
   background-size: cover;
 }
 
@@ -187,13 +189,10 @@ body,
 }
 
 .childContainer__91a9d:hover{
-	background-color:green;
+	background-color:var(--color-3);
 }
 
 .membersGroup_c8ffbb .container__13cf1 ,.header__13cf1{
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
 	border-radius:5px;
 	padding:5px;
 	margin:5px;
@@ -490,7 +489,7 @@ button[aria-label="Send a gift"] {
 }
 
 .categoryIcon_b9ee0c {
-  color: var(--color-2);
+  color: var(--color-1);
 }
 .header__14245 {
   color: var(--color-3);
@@ -730,7 +729,7 @@ button[aria-label="Send a gift"] {
 .note-Go5ZP2,
 .bodyInnerWrapper-2bQs1k,
 .footer__0eeee {
-  background: green);
+  background: var(--color-3));
 }
 
 .grid__623de {
@@ -840,10 +839,17 @@ button[aria-label="Send a gift"] {
 
 .contentWrapper__08434,
 .categoryList_c0e32c {
-  background-image: var(--ocean-bg);
+  background-color: var(--color-3);
 }
+
+.emojiPickerHasTabWrapper_c0e32c .categoryList_c0e32c{
+	background-color:var(--color-3);
+	box-shadow: 2px 0 8px;
+}
+/*emoji*/
 .header_c656ac {
-  background-color: blue;
+  background-color: var(--color-1);
+  box-shadow:0 2px 8px;
 }
 .titlePrimary_aeaaeb,
 .titleSecondary_aeaaeb {
