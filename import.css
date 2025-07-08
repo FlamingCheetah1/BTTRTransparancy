@@ -2,7 +2,7 @@
   *	@name BTTR-Transparancy
   *	@author FCheet
   * 	@source https://github.com/DevEvil99/Ocean-Discord-Theme
-  * 	@version 1.1.8
+  * 	@version 1.1.9
   */
 
 
@@ -50,9 +50,7 @@
 	
 	
   --discord-wildow-color: #990099 ;
-  --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;
-
-  
+  --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;  
 }
 
 .app__160d8 {
@@ -705,7 +703,8 @@ button[aria-label="Send a gift"] {
   color: var(--color-1);
 }
 .markup__75297 a {
-  color: var(--color-1);
+  color: black;
+
 }
 .topic__6ec1a.expandable__6ec1a {
   color: var(--color-2);
