@@ -48,6 +48,16 @@
 	--friendlist-trans:50%;
 	--active-now-trans:70%;
 	
+	--settingswidth: 		960;
+	--settingsheight: 		80;
+	--settingsbackground: 	transparent;
+
+	
+	--settingswidth_v: 		min(calc(1px * var(--settingswidth_s, var(--settingswidth))), 99vw);
+	--settingsheight_v: 		min(calc(1vh * var(--settingsheight_s, var(--settingsheight))), 99vh);
+	--settingsbackground_v: 	var(--settingsbackground_s, var(--settingsbackground));
+	
+
 	
   --discord-wildow-color: #990099 ;
   --ocean-bg: /*url(https://i.imgur.com/weOUkrT.png)*/;  
